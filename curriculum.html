@@ -14,7 +14,7 @@
         
             <input type="checkbox" id="menuhamburguesa">
         
-            <label  for="menuhamburguesa"class= "menuicono">
+            <label  for="menuhamburguesa"class= "menuicono"id="menuicon" >
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -27,51 +27,47 @@
             <li><a href="curriculum.html">curriculum</a></li>
             <li><a href="servicios.html" >servicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>    
-        
+            <li>  <button id="toggle-theme">🌙 Modo Oscuro</button>
+            </li>
         </ul>
+        <script>
+            const button = document.getElementById('toggle-theme');
+        button.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          document.body.classList.toggle('light-mode');
         
+          if (document.body.classList.contains('dark-mode')) {
+            button.textContent = '🌙 Modo Oscuro';
+          } else {
+            button.textContent = '☀️ Modo Claro';
+          }
+        });
+        // Establecer modo claro por defecto
+        document.body.classList.add('light-mode');
+        </script>
         </nav>
-<div class="curriculum">
-<div class="txt1"> 
-    <h2>Datos personales</h2> 
-    <p> Milagros Gordillo Rivero </p>
-    <p>O’Higgins 2191</p>
-    <p>Buenos Aires </p>
-    <p>3446237048</p>
-    <p>milagrosykovu6@gmail.com </p>
-</div>
-
-<div class="txt2">
-    <h2> Aptitudes</h2>
-    <p>Habilidades de comunicación y adaptación</p>
-    <p>Creatividad e innovación</p>
-    <p>Facilidad para asumir criticas constructivas</p>
-    <p>Pensamiento crítico y resolución de problemas</p>
-    <p>Habilidad numérica</p>
-    <p>Capacidad organizativa</p>
-    <p>Responsabilidad y compromiso</p>
-</div>
-
-<div class="txt3">
-    <h2> Formación</h2>
-    <p>Educación secundaria completa</p>
-    <p>2017-2022 Bachiller con orientación en Ciencias soc. y Humanidades 
-    </p>
-    <p>Educación primaria completa</p>
-    <p>2010-2016 Escuela N 4 Gervasio Méndez</p>
-
-</div>
-
-<div class="txt4">
-    <h2>Experiencia</h2>
-    <p>Paquette Office</p>
-    <p>Trabajos de investigación</p>
-</div>
-
-</div>
-
+        <section>
+        <h1 class="titulocv">Currículum </h1>
+        </section>
+        
+        <div class="cv-container">
+            <div class="cv-container">
+                <!-- Imagen que se puede descargar al hacer clic -->
+                <a href="CV_Milagros_Gordillo_Rivero.pdf" download="CV_Milagros_Gordillo_Rivero.pdf" class="cv-link">
+                    <img src="CV_Milagros_Gordillo_Rivero.png" alt="Currículum de Milagros Gordillo Rivero" class="cv-image">
+                </a>
+                <img src="fotolenguaje.png" alt="conocimientos" class="cv-image">
+            
+                    <section>
+                        <!-- Botón de descarga -->
+                                <a href="CV_Milagros_Gordillo_Rivero.pdf" download="CV_Milagros_Gordillo_Rivero.pdf" class="download-btn">
+                                Descargar CV en PDF
+                                </a>
+                            </section>
+        </div>
+        
 </main>
-<footer class="piedepagina">
+<footer class="piedepagina" id="footer">
     <ul class="redesociales">
         <li class="redsocial"> <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="icon">
             <ion-icon name="mail-outline"></ion-icon> </a>
