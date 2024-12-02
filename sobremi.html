@@ -14,7 +14,7 @@
         
             <input type="checkbox" id="menuhamburguesa">
         
-            <label  for="menuhamburguesa"class= "menuicono">
+            <label  for="menuhamburguesa"class= "menuicono" id="menuicon">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -27,18 +27,36 @@
             <li><a href="curriculum.html">curriculum</a></li>
             <li><a href="servicios.html" >servicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>    
-        
+            <li>  <button id="toggle-theme">🌙 Modo Oscuro</button>
+        </li>
         </ul>
+        <script>
+            const button = document.getElementById('toggle-theme');
+        button.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          document.body.classList.toggle('light-mode');
         
+          if (document.body.classList.contains('dark-mode')) {
+            button.textContent = '🌙 Modo Oscuro';
+          } else {
+            button.textContent = '☀️ Modo Claro';
+          }
+        });
+        // Establecer modo claro por defecto
+        document.body.classList.add('light-mode');
+        </script>
         </nav>
 <div>
 
 </div>
-<p class="parrafo">Tengo experiencia en el manejo de Microsoft Word, Excel y PowerPoint, adquirida a través de la realización de múltiples tareas durante mi etapa en la secundaria. Formación académica: primario y secundario completos. De 2010 hasta 2016 fueron mis años transcurridos en la escuela N 4 Gervasio Méndez; de 2017 hasta 2022 estuve en el instituto Pío XII, bachiller con orientación en Ciencias Sociales y Humanidades.</p>
-<p class="parrafo"> Valoro la colaboración y el trabajo en equipo, cumplo con mis compromisos y tomo decisiones basadas en lo que es conveniente, me adapto rápidamente a los cambios y me gusta trabajar bajo presión, mi objetivo es crecer profesional y personalmente.</p>
-</main>
-<footer class="piedepagina">
 
+    <p id="parrafo1" class="parrafo">Cuento con sólida experiencia en el manejo de herramientas de Microsoft Office, específicamente Word, Excel y PowerPoint, habilidades que desarrollé a lo largo de mi etapa escolar al realizar múltiples tareas y proyectos académicos que exigían un alto nivel de precisión y creatividad. Mi formación académica incluye la educación primaria y secundaria completas. 
+        Cursé la escuela primaria en la Escuela N° 4 Gervasio Méndez desde el año 2010 hasta 2016, donde adquirí una base sólida de conocimientos y valores esenciales. Posteriormente, entre 2017 y 2022, completé mi educación secundaria en el Instituto Pío XII, obteniendo el título de bachiller con orientación en Ciencias Sociales y Humanidades, lo que me permitió profundizar en el análisis crítico y la comprensión de temas relevantes para la sociedad.
+    </p>
+<p id="parrafo1" class="parrafo"> Además, valoro profundamente la colaboración y el trabajo en equipo, pues considero que los mejores resultados se alcanzan cuando se trabaja en conjunto hacia un objetivo común. Soy una persona comprometida, que siempre cumple con sus responsabilidades y busca tomar decisiones fundamentadas en lo que resulta más conveniente y beneficioso para el entorno en el que me desempeño. Poseo una alta capacidad de adaptación, lo que me permite ajustarme rápidamente a los cambios y a nuevos escenarios, además de disfrutar los retos que implican trabajar bajo presión. Mi objetivo a largo plazo es crecer tanto profesional como personalmente, desarrollando habilidades que me permitan enfrentar nuevos desafíos y contribuir al éxito de los proyectos en los que participe.
+    </p>
+</main>
+<footer class="piedepagina" id="footer">
     <ul class="redesociales">
         <li class="redsocial"> <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="icon">
             <ion-icon name="mail-outline"></ion-icon> </a>
@@ -54,6 +72,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </footer>
+
 </body>
+
 
 </html>
