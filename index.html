@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
 
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
     <input type="checkbox" id="menuhamburguesa">
 
-    <label  for="menuhamburguesa"class= "menuicono">
+    <label  for="menuhamburguesa"class= "menuicono" id="menuicon">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
@@ -26,14 +26,31 @@
     <li><a href="portafolio.html">Portafolio </a></li>
     <li><a href="curriculum.html">curriculum</a></li>
     <li><a href="servicios.html" >servicios</a></li>
-    <li><a href="contacto.html">Contacto</a></li>    
-
+    <li><a href="contacto.html">Contacto</a></li> 
+<li>
+        <button id="toggle-theme">🌙 Modo Oscuro</button>
+      </li>
 </ul>
+<script>
+    const button = document.getElementById('toggle-theme');
+button.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('light-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    button.textContent = '🌙 Modo Oscuro';
+  } else {
+    button.textContent = '☀️ Modo Claro';
+  }
+});
+// Establecer modo claro por defecto
+document.body.classList.add('light-mode');
+</script>
 
 </nav>
 
 <div class="contenedor">
-    <img class="foto" src="fotopresentacion.jpg" width="210px" height="260px">
+    <img class="fotopresentacion" src="fotopresentacion.jpg" width="210px" height="260px">
     <div> 
         <h2 class="titulogrande"> Bienvenidos a mi portafolio profesional
 
@@ -41,7 +58,7 @@
     </div>
 </div>
 </main>
-<footer class="piedepagina">
+<footer class="piedepagina" id="footer">
     <ul class="redesociales">
         <li class="redsocial"> <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="icon">
             <ion-icon name="mail-outline"></ion-icon> </a>
@@ -59,7 +76,6 @@
 </footer>
 
 
-</footer>
 
 </body>
 
