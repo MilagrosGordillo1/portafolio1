@@ -27,25 +27,48 @@
             <li><a href="curriculum.html">curriculum</a></li>
             <li><a href="servicios.html" >servicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>    
-        
+            <li>  <button id="toggle-theme">🌙 Modo Oscuro</button>
+            </li>
         </ul>
+        <script>
+            const button = document.getElementById('toggle-theme');
+        button.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          document.body.classList.toggle('light-mode');
         
+          if (document.body.classList.contains('dark-mode')) {
+            button.textContent = '🌙 Modo Oscuro';
+          } else {
+            button.textContent = '☀️ Modo Claro';
+          }
+        });
+        // Establecer modo claro por defecto
+        document.body.classList.add('light-mode');
+        </script>
         </nav>
 <div class="portafolio">
-    <h2> Proyectos que eh realizado</h2>
-    <h3> Trabajos de investigación</h3>
-</div>
-<div class="portafolio1">
-    <p>
-        <a href="https://drive.google.com/file/d/1RHfnILioYjTJiEYaU6H30ERmaf3OZGQW/view?usp=drive_link" target="_blank" class="link1">Trabajo de investigación estrés académico</a>
-    </p>
-    <p>
-        <a href="https://drive.google.com/file/d/16u6OSKRnx_uBsDQfxKRm4p-Qy0JIWv0k/view?usp=drive_link" target="_blank" class="link2">Trabajo monografía </a> 
-    </p>
+    <h2 class="tituloportafolio"> Proyectos que he realizado</h2>
+    <h3 class="subtitulo"> Trabajos de investigación</h3>
+      
+   <div class="contenedorflex">  
+       <div class="caja1">
+           <img class="Enconstruccion1" src="tp.jpg" alt="fototp" id="fototp">
+           <a href="" target="_blank" class="boton-externo">Ver trabajo</a>
+            
+       </div>
+
+       <div class="caja">
+       <img class="Enconstruccion" src="monografia.jpg" alt="fotoeureka" id="fotomonografia">
+       <a href="https://drive.google.com/file/d/16u6OSKRnx_uBsDQfxKRm4p-Qy0JIWv0k/view?usp=drive_link" target="_blank" class="boton-externo1">Ver trabajo</a>
+       <div>
+    
+       </div>
+
 </div>
 
+
 </main>
-<footer class="piedepagina">
+<footer class="piedepagina" id="footer">
     <ul class="redesociales">
         <li class="redsocial"> <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="icon">
             <ion-icon name="mail-outline"></ion-icon> </a>
@@ -61,7 +84,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </footer>
-
 </body>
 
 </html>
