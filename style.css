@@ -428,7 +428,9 @@ margin-left:420px;
     /*S0BRE MI*/
     .parrafo{
     width: 70%;
-    margin-left: 100px;
+    }
+    #parrafo1{
+    margin-left: 60px;
     }
 
 }
