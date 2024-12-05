@@ -582,7 +582,7 @@ margin-left:420px;
     font-size: 18px;
 }
 /* Estilo para modo oscuro */
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     .contact-info h2, p {
         color: #000000; /* Cambia el texto a oscuro */
     }
