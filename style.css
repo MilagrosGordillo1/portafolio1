@@ -584,14 +584,16 @@ margin-left:420px;
 /* Estilo para modo oscuro */
 @media (prefers-color-scheme: light) {
     .contact-info h2, p {
-        color: #000000; /* Cambia el texto a blanco */
+        color: #000000; /* Cambia el texto a oscuro */
     }
-
+    .body{
+        background-color: fffffff;
+    }
  .consult {
-        color: #000000; /* Cambia el texto a blanco */
+        color: #000000; /* Cambia el texto a oscuro */
     }
     #subtituloo {
-        color: #ffffff; /* Cambia el texto a blanco */
+        color: #ffffff; /* Cambia el texto a oscuro */
     }
     body {
         background-color: #000000; /* Fondo oscuro opcional */
